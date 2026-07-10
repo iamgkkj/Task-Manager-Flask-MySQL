@@ -5,6 +5,20 @@
 ### Application Number: IN26011759
 A simple Flask web application for Admin Task Management. The application allows admin users to login and assign tasks to subordinates.
 
+## 📸 Screenshots
+
+Here is a look at the working application in action:
+
+### Admin Login Page
+*Simple and secure entry point for administrators.*
+![Admin Login Page](https://raw.githubusercontent.com/iamgkkj/Task-Manager-Flask-MySQL/086c8af99743dddf47e28bf3162247871411b2b6/static/LoginPage.png)
+
+---
+
+### Task Management Dashboard
+*The core interface for assigning and tracking employee tasks.*
+![Task Management Dashboard](https://raw.githubusercontent.com/iamgkkj/Task-Manager-Flask-MySQL/086c8af99743dddf47e28bf3162247871411b2b6/static/Dashboard.png)
+
 ## Tech Stack
 
 - **Frontend**: Vanilla HTML and basic CSS
