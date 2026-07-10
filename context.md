@@ -33,8 +33,8 @@ A simple Flask web application for Admin Task Management. The application allows
 - **tasks**: task_id (PK, Auto Increment), employee_name, task_title, is_completed (Boolean/TinyInt)
 
 ## Default Credentials
-- Username: admin
-- Password: admin
+- **Admin Login**: Username: admin, Password: admin
+- **Database**: User: taskmanager, Password: taskmanager123
 
 ## Setup Instructions
 1. Install dependencies: `pip install -r requirements.txt`

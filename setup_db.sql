@@ -1,6 +1,10 @@
 CREATE DATABASE IF NOT EXISTS task_manager;
 USE task_manager;
 
+CREATE USER IF NOT EXISTS 'taskmanager'@'localhost' IDENTIFIED BY 'taskmanager123';
+GRANT ALL PRIVILEGES ON task_manager.* TO 'taskmanager'@'localhost';
+FLUSH PRIVILEGES;
+
 CREATE TABLE IF NOT EXISTS admin_users (
     id INT AUTO_INCREMENT PRIMARY KEY,
     username VARCHAR(50) NOT NULL,

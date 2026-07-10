@@ -7,8 +7,8 @@ app.secret_key = 'secretkey123'
 # Database configuration
 db_config = {
     'host': 'localhost',
-    'user': 'root',
-    'password': '',
+    'user': 'taskmanager',
+    'password': 'taskmanager123',
     'database': 'task_manager'
 }
 
@@ -22,7 +22,7 @@ def login():
         password = request.form['password']
         
         conn = get_db_connection()
-        cursor = conn.cursor()
+        cursor = conn.cursor(buffered=True)
         cursor.execute("SELECT * FROM admin_users WHERE username = %s AND password = %s", (username, password))
         user = cursor.fetchone()
         cursor.close()
@@ -48,7 +48,7 @@ def tasks():
         is_completed = request.form['is_completed']
         
         conn = get_db_connection()
-        cursor = conn.cursor()
+        cursor = conn.cursor(buffered=True)
         cursor.execute("INSERT INTO tasks (employee_name, task_title, is_completed) VALUES (%s, %s, %s)",
                       (employee_name, task_title, is_completed))
         conn.commit()
@@ -57,7 +57,7 @@ def tasks():
     
     # Fetch all tasks
     conn = get_db_connection()
-    cursor = conn.cursor()
+    cursor = conn.cursor(buffered=True)
     cursor.execute("SELECT task_id, employee_name, task_title, is_completed FROM tasks")
     tasks = cursor.fetchall()
     cursor.close()
